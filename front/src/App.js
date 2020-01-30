@@ -75,6 +75,14 @@ class App extends React.Component {
               />
             )}
           </Route>
+          <Route exact path='/artist'>
+            {this.state.artists && (
+              <DisplayArtist
+                artist={this.state.artists[this.state.currentArtist]}
+                nextArtist={this.nextArtist}
+              />
+            )}
+          </Route>  
           {/* <Route exact path='/formperf'>
             <FormPerf />
           </Route>
@@ -84,14 +92,7 @@ class App extends React.Component {
           
          
           
-          <Route exact path='/artist'>
-            {this.state.artists && (
-              <DisplayArtist
-                artist={this.state.artists[this.state.currentArtist]}
-              />
-            )}
-            <button  type="button" onClick={this.nextArtist}>Suivant</button>
-          </Route>        
+                
           <Route exact path='/formartist'>
             <FormArtist artist={this.state.artist}/>
           </Route>   

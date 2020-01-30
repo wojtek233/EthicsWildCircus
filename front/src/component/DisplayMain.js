@@ -12,7 +12,11 @@ function DisplayMain() {
        <Link to={{pathname:"/perf"     
               }}>
                 <button>Performances</button>
-      </Link> 
+       </Link>
+       <Link to={{pathname:"/artist"     
+              }}>
+                <button>Artists</button>
+       </Link> 
     </div>
   );
 }
