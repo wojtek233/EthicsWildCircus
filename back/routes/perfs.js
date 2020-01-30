@@ -23,24 +23,19 @@ router.get('/', (request, response) => {
    });
   })
 
-
   router.post('/', (request, response) => {
-    const {
-      name,
-      description,
-      photo
-    } = request.body;
-  
-    connection.query('INSERT INTO perf SET ?', 
-      {name, description, photo}, (err, results) => {
-        if (err) {
-          console.log(err);
-          response.status(500).send("Error saving a new perf");
-        } else {
-          response.status(200).send("New perf saved");
-        }
-      }); 
+    const formData = request.body;
+    connection.query('INSERT INTO perf SET ?', formData, (err, results) => {
+      if (err) {
+        console.log(err);
+        response.status(500).send("Error saving a new place");
+      } else {
+        response.status(201).send({...formData, id: results.insertId});
+      }
+    });
   });
+
+
 
   router.put('/:id', (request, response) => {
     const idPerf = request.params.id;
