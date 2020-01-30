@@ -70,8 +70,9 @@ class App extends React.Component {
           <Route exact path='/perf' >
             {this.state.perfs && (
               <DisplayPerf
-                perf={this.state.perfs[this.state.currentPerf]}
-                nextPerf={this.nextPerf}
+                perfs={this.state.perfs}
+                // perf={this.state.perfs[this.state.currentPerf]}
+                // nextPerf={this.nextPerf}
               />
             )}
           </Route>
