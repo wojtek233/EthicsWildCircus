@@ -1,5 +1,6 @@
 import React from 'react';
 import UploadImage from './UploadImage'
+import { Link } from 'react-router-dom'
 
 class FormPerf extends React.Component {
   constructor(props) {
@@ -30,6 +31,9 @@ class FormPerf extends React.Component {
     render() {
       return (
       <div className = "formContainer">
+        <button className='arrowBack'>
+          <Link className='arrowBackLink' to="/">&lsaquo;</Link>
+        </button>
         <div className="bannerTop">
           <h1 className='title'>Creation
             <br/>

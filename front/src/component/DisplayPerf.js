@@ -5,6 +5,9 @@ function DisplayPerf(props){
 
   return(
   <div id="pagePerf">
+    <button className='arrowBack'>
+      <Link className='arrowBackLink' to="/">&lsaquo;</Link>
+    </button>
     <h2>Performances</h2>
     {props.perfs.map((perf) => 
       <div>
