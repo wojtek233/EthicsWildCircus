@@ -16,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      perfs : null,
+      perf: null,
       currentPerf: 0,
       artist :null,
       currentArtist: 0,
@@ -67,20 +67,23 @@ class App extends React.Component {
           <Route exact path="/">
             <DisplayMain />
           </Route>
+          <Route exact path='/perf' >
+            {this.state.perfs && (
+              <DisplayPerf
+                perf={this.state.perfs[this.state.currentPerf]}
+                nextPerf={this.nextPerf}
+              />
+            )}
+          </Route>
           {/* <Route exact path='/formperf'>
             <FormPerf />
           </Route>
           <Route exact path='/modifperf'>
             <ModifPerf perf={this.state.perfs} />
           </Route>
-          <Route exact path='/perf' >
-            {this.state.perfs && (
-              <DisplayPerf
-                perf={this.state.perfs[this.state.currentPerf]}
-              />
-            )}
-           <button  type="button" onClick={this.nextPerf}>Suivant</button>
-          </Route>
+          
+         
+          
           <Route exact path='/artist'>
             {this.state.artists && (
               <DisplayArtist

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function DisplayMain() {
   return (
@@ -8,6 +9,10 @@ function DisplayMain() {
           className='Logo'
           alt='logo Wild'>
        </img>
+       <Link to={{pathname:"/perf"     
+              }}>
+                <button>Performances</button>
+      </Link> 
     </div>
   );
 }
