@@ -9,7 +9,7 @@ import DisplayArtist from './component/DisplayArtist.js'
 import FormArtist from './component/FormArtist.js'
 import { Route, BrowserRouter, Redirect } from 'react-router-dom'
 import UploadImage from './component/UploadImage.js'
-
+import Prices from './component/Prices.js'
 
 
 class App extends React.Component {
@@ -71,8 +71,6 @@ class App extends React.Component {
             {this.state.perfs && (
               <DisplayPerf
                 perfs={this.state.perfs}
-                // perf={this.state.perfs[this.state.currentPerf]}
-                // nextPerf={this.nextPerf}
               />
             )}
           </Route>
@@ -83,7 +81,11 @@ class App extends React.Component {
                 nextArtist={this.nextArtist}
               />
             )}
-          </Route>  
+          </Route>
+          <Route exact path='/prices' >
+               <Prices />
+          </Route>
+           
           {/* <Route exact path='/formperf'>
             <FormPerf />
           </Route>
