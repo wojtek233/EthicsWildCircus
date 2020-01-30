@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function DisplayArtist(props){
 
@@ -16,6 +17,9 @@ function DisplayArtist(props){
   
   return(
   <div id="pagePlace">
+    <button className='arrowBack'>
+      <Link className='arrowBackLink' to="/">&lsaquo;</Link>
+    </button>
     <div id="ProfilPlace">
     <img className="photoProfil" src={imgValues.src} alt={imgValues.alt} ></img>
     </div>
