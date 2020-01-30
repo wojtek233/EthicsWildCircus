@@ -1,18 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function DisplayPerf(props){
-
-  // let url = 'http://via.placeholder.com/100x80'
-  // if (props.perf.photo) {
-  // url = props.perf.photo;
-  // if (!url.startsWith('http')) {
-  // url = `http://localhost:8000/${props.perf.photo}`;
-  //  }}
-
-  // let imgValues = {
-  // src: url,
-  // alt: 'profil perf'
-  // }
 
   return(
   <div id="pagePerf">
@@ -24,6 +13,10 @@ function DisplayPerf(props){
       <p>{perf.description}</p>
       </div>
       )}
+      <Link to={{pathname:"/formperf"     
+              }}>
+                <button>Create a performance</button>
+       </Link> 
   </div>
   )
 }
