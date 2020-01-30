@@ -4,26 +4,23 @@ import './App.css'
 import DisplayMain from './component/DisplayMain.js'
 import DisplayPerf from './component/DisplayPerf.js'
 import FormPerf from './component/FormPerf'
-import ModifPerf from './component/ModifPerf'
 import DisplayArtist from './component/DisplayArtist.js'
-import FormArtist from './component/FormArtist.js'
 import { Route, BrowserRouter, Redirect } from 'react-router-dom'
 import UploadImage from './component/UploadImage.js'
-
+import Prices from './component/Prices.js'
 
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      perfs : null,
+      perf: null,
       currentPerf: 0,
       artist :null,
       currentArtist: 0,
     }
     this.nextArtist = this.nextArtist.bind(this)
-    this.nextPerf = this.nextPerf.bind(this)
-  }
+    }
 
   
   nextArtist() {
@@ -35,15 +32,7 @@ class App extends React.Component {
     })
   }
 
-  nextPerf() {
-    this.setState(prevState => {
-      return {
-        currentPerf:
-          (prevState.currentPerf + 1) % prevState.perfs.length
-      }
-    })
-  }
- 
+  
   componentDidMount() {
     
     axios.get('http://localhost:8000/api/perfs')
@@ -60,41 +49,58 @@ class App extends React.Component {
           artists: data})
       })
     }
-    
+  
+    postFormDataPerf(formData) {
+      axios.post('http://localhost:8000/api/perfs', {
+        name: formData.name,
+        photo: formData.photo,
+        description: formData.description,
+      })
+      .then(response => {
+        if (response.status === 201) {
+          this.setState(prevState => {
+            return {perfs: [...prevState.perfs, response.data]}
+          }, () => {
+            alert("Your performance is created !")
+          })
+        } else {
+          console.log(response)
+        }
+      })
+    }  
+
   render() {
           return (
         <BrowserRouter>
           <Route exact path="/">
             <DisplayMain />
           </Route>
-          {/* <Route exact path='/formperf'>
-            <FormPerf />
-          </Route>
-          <Route exact path='/modifperf'>
-            <ModifPerf perf={this.state.perfs} />
-          </Route>
           <Route exact path='/perf' >
             {this.state.perfs && (
               <DisplayPerf
-                perf={this.state.perfs[this.state.currentPerf]}
+                perfs={this.state.perfs}
               />
             )}
-           <button  type="button" onClick={this.nextPerf}>Suivant</button>
           </Route>
           <Route exact path='/artist'>
             {this.state.artists && (
               <DisplayArtist
                 artist={this.state.artists[this.state.currentArtist]}
+                nextArtist={this.nextArtist}
               />
             )}
-            <button  type="button" onClick={this.nextArtist}>Suivant</button>
-          </Route>        
-          <Route exact path='/formartist'>
-            <FormArtist artist={this.state.artist}/>
-          </Route>   
+          </Route>
+          <Route exact path='/prices' >
+               <Prices />
+          </Route>
+           
+          <Route exact path='/formperf'>
+            <FormPerf postFormDataPerf={this.postFormDataPperf} />
+          </Route>
+   
           <Route exact path='/uploadimages'>
             <UploadImage />
-          </Route> */}
+          </Route>
         </BrowserRouter>
     )
   }
