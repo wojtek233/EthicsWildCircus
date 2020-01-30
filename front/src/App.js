@@ -20,6 +20,7 @@ class App extends React.Component {
       currentArtist: 0,
     }
     this.nextArtist = this.nextArtist.bind(this)
+    this.postFormDataPerf = this.postFormDataPerf.bind(this)
     }
 
   
@@ -95,7 +96,7 @@ class App extends React.Component {
           </Route>
            
           <Route exact path='/formperf'>
-            <FormPerf postFormDataPerf={this.postFormDataPperf} />
+            <FormPerf postFormDataPerf={this.postFormDataPerf} />
           </Route>
    
           <Route exact path='/uploadimages'>
