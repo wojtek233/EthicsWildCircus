@@ -5,9 +5,10 @@ import DisplayMain from './component/DisplayMain.js'
 import DisplayPerf from './component/DisplayPerf.js'
 import FormPerf from './component/FormPerf'
 import DisplayArtist from './component/DisplayArtist.js'
-import { Route, BrowserRouter, Redirect } from 'react-router-dom'
+import { Route, BrowserRouter} from 'react-router-dom'
 import UploadImage from './component/UploadImage.js'
 import Prices from './component/Prices.js'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 class App extends React.Component {
