@@ -1,6 +1,7 @@
 import React from 'react';
 import UploadImage from './UploadImage'
 import { Link } from 'react-router-dom'
+import './Display.css'
 
 class FormPerf extends React.Component {
   constructor(props) {
@@ -30,19 +31,17 @@ class FormPerf extends React.Component {
 
     render() {
       return (
-      <div className = "formContainer">
+      <div className = "bloc_page">
+        <div className = "boit">
         <button className='arrowBack'>
           <Link className='arrowBackLink' to="/">&lsaquo;</Link>
         </button>
-        <div className="bannerTop">
-          <h1 className='title'>Creation
-            <br/>
-              of a performance
-          </h1>
+        <div >
+          <h2 >Creation of a performance </h2>
         </div>
-        <form>
-            <div className="form-place">
-                <label htmlFor="place">Name of perf</label>
+        <form id = "formP">
+            <div className="form-perf">
+                <label htmlFor="perf">Name of performance</label>
                 <input 
                   type="text" 
                   name="name" 
@@ -51,14 +50,14 @@ class FormPerf extends React.Component {
                   required/>
             </div> 
 
-            <div className="form-place">
+            <div className="form-perf">
                 <label htmlFor="photo">Picture</label>
                 <UploadImage
                   savePicture = {this.savePicture}
                 />
             </div>
             
-            <div className = 'textareaForm'>
+            <div className = 'form-perf'>
                 <label htmlFor="description">Description</label>
                 <textarea 
                   className='textareaFormBox' 
@@ -77,6 +76,7 @@ class FormPerf extends React.Component {
         >
           Créer
         </button>
+        </div>
     </div>
     )
   }

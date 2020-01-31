@@ -32,8 +32,8 @@ INSERT INTO artist
 VALUES
 ('Dwayne', 'Ferguson','https://randomuser.me/api/portraits/men/83.jpg','Clown N°1',1),
 ('Melinda', 'Harper', 'https://randomuser.me/api/portraits/women/8.jpg','Clown N°2',1),
-('Clyde', 'Carroll', 'https://randomuser.me/api/portraits/men/7.jpg','magician N°1',2),
-('Joy', ' Hall', 'https://randomuser.me/api/portraits/women/35.jpg','magician N°2',2),
-('Douglas', 'Gray', 'https://randomuser.me/api/portraits/men/36.jpg','dragon tamer N°1',3),
-('Kristina', 'Hansen', 'https://randomuser.me/api/portraits/women/70.jpg','dragon tamer N°2',3);
+('Clyde', 'Carroll', 'https://randomuser.me/api/portraits/men/7.jpg','Magician N°1',2),
+('Joy', ' Hall', 'https://randomuser.me/api/portraits/women/35.jpg','Magician N°2',2),
+('Douglas', 'Gray', 'https://randomuser.me/api/portraits/men/36.jpg','Dragon Tamer N°1',3),
+('Kristina', 'Hansen', 'https://randomuser.me/api/portraits/women/70.jpg','Dragon Tamer N°2',3);
 

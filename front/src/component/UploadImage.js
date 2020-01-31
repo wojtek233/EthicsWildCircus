@@ -1,4 +1,6 @@
 import React from 'react'
+import './Display.css'
+
 const axios = require("axios");
 
 class UploadImage extends React.Component {
