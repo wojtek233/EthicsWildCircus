@@ -6,7 +6,8 @@ function Prices(){
 
     
   return(
-  <div id="pagePlace">
+  <div className = "bloc_page">
+    <div className = "boit">
     <button className='arrowBack'>
       <Link className='arrowBackLink' to="/">&lsaquo;</Link>
     </button>
@@ -35,6 +36,7 @@ function Prices(){
           <td>65</td>
       </tr>
     </table>
+  </div>
   </div>
   )
 }

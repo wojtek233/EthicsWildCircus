@@ -8,13 +8,13 @@ function DisplayPerf(props){
 
   return(
   <div className = "bloc_page">
-    <div class="boit">
+    <div className="boit">
     <button className='arrowBack'>
       <Link className='arrowBackLink' to="/">&lsaquo;</Link>
     </button>
     <h2>Performances</h2>
     <div id = "car">
-      <Carousel infiniteLoop width="80%" dynamicHeight autoPlay showThumbs={false}>
+      <Carousel infiniteLoop width="80%"  autoPlay showThumbs={false}>
           {props.perfs.map((perf) => 
           <div>
           <img src={`http://localhost:8000/${perf.photo}`} alt={'profil perf'} />

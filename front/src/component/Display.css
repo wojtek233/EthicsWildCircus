@@ -48,6 +48,22 @@ h3
 {
 	font-size: 2em;
 }
+
+.titreProfil
+{
+  color: #00cfcf;/*couleur betterave rvb 146,14,58 */
+	text-align: center;
+	border: 1px solid #920e3a;/*bleu cirque rvb 0,207,207; ev b2d8e1=bleu clair*/ 
+}
+ .textareaFormBox
+ {
+  width:35em;
+  height: 4em;
+  font-size: 0.7em;
+  color: #00cfcf; /*bleu cirque*/
+  margin-left: 2rem;
+ }
+
 hr
 {
 	width:50%;
@@ -179,7 +195,7 @@ h1
   height: 1.5em;
   font-size: 0.7em;
 	color: #00cfcf; /*bleu cirque*/
-
+  margin-left: 2rem;
 }
 
 #formP
@@ -195,6 +211,15 @@ h1
 }
 
 
+
+.photoProfil
+{
+  width: 15em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+
+}
 
 /*section pric*/
 #pric h2

@@ -5,7 +5,7 @@ import './Display.css'
 function DisplayMain() {
   return (
     <div className = "bloc_page">
-      <div class="boit">
+      <div className="boit">
         <div id="heade">
         <h1 id="tittle">Wild Ethic Circus</h1>
         </div>
