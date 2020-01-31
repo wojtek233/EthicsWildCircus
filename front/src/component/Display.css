@@ -17,7 +17,7 @@
 {
     border: 1px solid #00cfcf; /*bleu cirque*/
     margin-top: 15px;
-    height: 412px;
+    height: 412rem;
     border-radius: 5px;
     background: url("https://live.staticflickr.com/7853/40190115523_f661c587fe_b.jpg") no-repeat center/*/80%*/;
     background-size: cover;
@@ -64,10 +64,7 @@ h3
   margin-left: 2rem;
  }
 
-hr
-{
-	width:50%;
-}
+
 body
 {
 	background-color: black;
@@ -123,7 +120,7 @@ h1
   text-decoration: none;
   font-family: 'ZCOOL XiaoWei', serif;
 }
-#nav button:hover /* Apparence au survol des liens */
+#nav button:hover, #navp button:hover /* Apparence au survol des liens */
 {
    text-decoration: underline;
    color: #920e3a;/*32ae3a;*/
@@ -175,7 +172,7 @@ h1
  	overflow: auto;
 }
 
-.form-perf
+.form-perf, .form-cont
 {
   background-color: Transparent;
   border: none;
@@ -198,7 +195,16 @@ h1
   margin-left: 2rem;
 }
 
-#formP
+.form-cont input#name
+{
+  width:20em;
+  height: 1.5em;
+  font-size: 0.7em;
+	color: #00cfcf; /*bleu cirque*/
+  margin-left: 2rem;
+}
+
+#formP, #formC
 {
   display: flex ;
   flex-direction: column;
@@ -233,7 +239,7 @@ table
   
   	margin: auto;
   	background-color: rgba(0, 207, 207, 0.1);
- 	text-align:center;
+ 	  text-align:center;
   	margin-bottom: 4%;
   	box-shadow: 2px 2px 5px white;   
 }
@@ -252,7 +258,6 @@ caption
 }
 
 
-/*section cont*/
 #cont h2, textarea, input
 {
 	background-color: rgba(0, 207, 207, 0.1);

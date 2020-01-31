@@ -22,6 +22,7 @@ function DisplayArtist(props){
     <button className='arrowBack'>
       <Link className='arrowBackLink' to="/">&lsaquo;</Link>
     </button>
+    <h2>Artists</h2>
     <div id="profilArtist">
     <img className="photoProfil" src={imgValues.src} alt={imgValues.alt} ></img>
     </div>

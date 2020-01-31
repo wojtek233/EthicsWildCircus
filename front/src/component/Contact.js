@@ -13,16 +13,16 @@ function Contact(){
         </button>
         <div id="cont">
           <div>
-            <h2 id="Contact">Contact Us</h2>
+            <h2 >Contact Us</h2>
           </div>
-          <form method="post" action="traitement.php">
-            <div>
+          <form id = "formC" method="post" action="traitement.php">
+            <div className = 'form-cont'>
               <label for="emailadress">Your email : </label>
-              <input type="text" name="emailadress" id="emailadress" size="30" placeholder="@" />
+              <input type="text" name="emailadress" id="emailadress" placeholder="@" />
             </div>
             <div>
                 <label for="mail">Your message :</label> <br />
-                <textarea name="sendmail" id="mail" rows="6" cols="100"></textarea>
+                <textarea className='textareaContBox' name="sendmail" id="mail" ></textarea>
             </div>
             <div>
             <input type="submit" value="Send" />
