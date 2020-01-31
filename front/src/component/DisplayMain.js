@@ -22,7 +22,11 @@ function DisplayMain() {
             <Link to={{pathname:"/prices"     
                     }}>
                       <button>Prices</button>
-            </Link> 
+            </Link>
+            <Link to={{pathname:"/contact"     
+                    }}>
+                      <button>Contact</button>
+            </Link>
           </div>
           </div>
         <section id="abou" class="boit">

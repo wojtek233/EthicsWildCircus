@@ -9,7 +9,7 @@ import { Route, BrowserRouter} from 'react-router-dom'
 import UploadImage from './component/UploadImage.js'
 import Prices from './component/Prices.js'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import Contact from './component/Contact.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -95,11 +95,12 @@ class App extends React.Component {
           <Route exact path='/prices' >
                <Prices />
           </Route>
-           
+          <Route exact path='/contact' >
+               <Contact />
+          </Route>
           <Route exact path='/formperf'>
             <FormPerf postFormDataPerf={this.postFormDataPerf} />
           </Route>
-   
           <Route exact path='/uploadimages'>
             <UploadImage />
           </Route>
